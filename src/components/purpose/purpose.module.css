@@ -1,0 +1,25 @@
+.purposeParent{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 3rem;
+    color: var(--text);
+}
+
+.changeColor{
+    --text:#5b4b36;
+}
+
+.light{
+    text-transform: uppercase;
+    letter-spacing: 0.11rem;
+    font-weight: 200;
+}
+.head2{
+    font-family: ui-sans-serif;
+    font-size: 3rem;
+}
+
+.para{
+    line-height: 2rem;
+}

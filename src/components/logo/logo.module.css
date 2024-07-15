@@ -1,0 +1,7 @@
+.first{
+    color: var(--text);
+}
+
+.second{
+    color: var(--bgSoft);
+}

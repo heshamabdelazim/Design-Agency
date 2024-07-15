@@ -1,0 +1,7 @@
+.socialParent{
+    /* background-color: red; */
+    animation: rotate 10s infinite linear;
+    display: flex;
+    justify-content: space-between;
+}
+

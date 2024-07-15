@@ -1,0 +1,17 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem ;
+    position: fixed;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    transition: 0.5s;
+    z-index: 9;
+}
+
+.links{
+    display: flex;
+    gap: 0.5rem;
+}
