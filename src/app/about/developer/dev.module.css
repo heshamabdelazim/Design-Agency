@@ -1,0 +1,70 @@
+.container{
+    display: flex;
+    gap: 3rem;
+    /* padding: 4rem; */
+    /* background: linear-gradient(to right , var(--text), var(--bgSoft)); */
+}
+
+/* first child the image */
+
+.imgContainer{
+    position: relative;
+    width: 276px;
+    height: 376px;
+    border-radius: 35px;
+    border-left: var(--bgSoft) 14px solid;
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
+}
+.img{
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+/* second child text */
+.textContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    overflow: hidden;
+    opacity: 0;
+    animation: text 1s forwards ;
+    scale: 2;
+    padding: 0 0 0 2rem;
+    width: 100%;
+}
+
+.hidden{
+    overflow: hidden; /*This helps in coming the text*/
+    flex: 1;
+}
+
+.detailValue{
+    color: #a6a6a6;
+    letter-spacing: 0.11rem;
+    }
+
+.content{
+    line-height: 1.7rem;
+    letter-spacing: 0.05rem;
+    position: relative;
+}
+
+.content::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 10px;
+    height: 100%;
+    background-color: var(--text);
+}
+
+/* animation */
+
+
+
+@keyframes text{
+    to{
+        scale: 1;
+        opacity: 1;
+    }
+}

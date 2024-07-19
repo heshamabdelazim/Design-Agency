@@ -1,0 +1,12 @@
+.container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    text-align: center;
+}
+
+.article{
+    font-size: 1.2rem;
+    letter-spacing: 0.05rem;
+}

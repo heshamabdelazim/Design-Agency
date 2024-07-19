@@ -3,7 +3,8 @@
     --bgSoft:#e2c0d2;
     --bg2:#8f8f8f;
     --text: #02457a;
-    --textSoft:#e5e5e5;
+    --linkColor:#42bd42;
+    --textFooter:#e5e5e5;
     --btn:#3673fd;
     --maxWidth:900px;
 }
@@ -24,22 +25,19 @@
     font-size: 1.2rem;
     margin-top: 1.5rem;
     cursor: pointer;
+    box-shadow: 0 0 22px 1px #00000059;
+    background-size: 200%;
 }
 
 .button:hover{
     transition: 0.6s;
-    background-position: 146px;
+    background-position: -100%;
 }
 
 .container{
     width: 100%;
-    /* margin: auto; */
-    padding-left:50px;
-    padding-right:50px;
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: space-between; */
-    /* min-height:100vh ; */
+    padding: 5rem;
+
 }
 
 body{

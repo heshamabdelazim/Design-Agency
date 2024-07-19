@@ -1,0 +1,20 @@
+.container{
+    padding: 5rem 0;
+}
+
+.head{
+    text-align: center;
+    font-weight: 200;
+    font-size: 2rem;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+}
+
+.content{
+    background-color: var(--textFooter);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    margin-top: 3rem;
+    gap: 2rem;
+    /* row-gap:5rem ; */
+}

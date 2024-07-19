@@ -3,7 +3,7 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 7.5rem;
 }
 
 .article{
@@ -27,3 +27,24 @@
     line-height: 2rem;
     padding: 0 2rem;
 }
+
+.href{
+    color: var(--linkColor);
+    font-size: 1.1rem;
+    text-decoration: underline;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+}
+.href:hover{
+    color: var(--text);
+}
+
+.gallery{
+    display:flex;
+    flex-wrap: wrap;
+    /* grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); */
+    justify-content: center;
+    gap: 3rem;
+
+}
+
