@@ -18,21 +18,6 @@
 }
 
 /* image left */
-.postImage{
-    width: 125px;
-    height: 125px;
-}
-
-.noImg{
-    font-size: 2rem;
-    text-align: center;
-    color: lightsteelblue;
-    text-transform: uppercase;
-    letter-spacing: 0.6rem;
-    transform: rotate(330deg);
-    /* padding: 1rem;*/
-    
-}
 
 .text{
     flex: 1;

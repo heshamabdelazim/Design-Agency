@@ -35,9 +35,8 @@
 }
 
 .container{
-    width: 100%;
+    /* width: 100%; */
     padding: 5rem;
-
 }
 
 body{
@@ -48,4 +47,17 @@ body{
 a{
     text-decoration:none ;
     color: inherit;
+}
+
+@media (max-width:991px){
+    .container{
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+}
+@media (max-width:676px){
+    .container{
+        padding-left: 1.4rem;
+        padding-right: 1.4rem;
+    }
 }

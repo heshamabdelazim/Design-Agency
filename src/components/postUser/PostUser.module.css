@@ -1,0 +1,29 @@
+.userParent{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.img{
+    overflow: hidden;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    /* border-left: 1px solid var(--bgSoft); */
+}
+
+.spans{
+    display: flex;
+    flex-direction:column;
+    gap: 0.1rem ;
+}
+
+.spans.author{
+    margin-right: 60px;
+}
+
+.userName{
+    font-size: 1.3rem;
+    font-weight: 600;
+}

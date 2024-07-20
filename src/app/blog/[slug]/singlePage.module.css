@@ -1,12 +1,55 @@
 .container{
-    text-align: center;
+    /* text-align: center; */
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.textContainer{
     display: flex;
     flex-direction: column;
-    gap: 3rem;
-    text-align: center;
+    gap: 1.4rem;
 }
+
+.title{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
 
 .article{
     font-size: 1.2rem;
     letter-spacing: 0.05rem;
+    line-height: 3rem;
+}
+
+
+@media (max-width:991px){
+    .title{
+        font-size: calc(1rem + 1.2vw);
+    }
+}
+
+@media (max-width:767px){
+    .container div:nth-child(1){ 
+        /* image disappear */
+        display: none;
+    }
+    .textContainer{
+        /* space between texts divs */
+        gap: 3.3rem;
+    }
+    .spans{
+        font-size: 0.8rem;
+    }
+    .userName{
+        font-size: 1rem;
+    }
+    .article{
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    .userParent{
+        justify-content: space-between;
+    }
 }

@@ -7,6 +7,7 @@ import dynamic from "next/dynamic";
 import { useEffect, useRef } from "react";
 import Link from "next/link";
 import Card from "@/components/card/card";
+import { allDevelopers } from "../../../lib/data";
 
 const About = () => {
   //================
@@ -59,37 +60,13 @@ const About = () => {
 
   // =====================================================================
 
-  const allDevelopers = [
-    {
-      name: "Ahmed Yasser",
-      social: [{ icon: "zzzzzz" }, { icon: "zzzzzzzz" }, { icon: "zz" }],
-      path: "/Hamza.jpg",
-      parag: "A backEnd Developer who plays a big role in backEnd development",
-      id: 1,
-    },
-    {
-      name: "Philip Maher",
-      social: [{ icon: "zzzzzz" }, { icon: "zzzzzzzz" }, { icon: "zz" }],
-      path: "/Philip.jpg",
-      parag: "A backEnd Developer who plays a big role in backEnd development",
-      id: 2,
-    },
-    {
-      name: "Hesham Abdelazim",
-      social: [{ icon: "zzzzzz" }, { icon: "zzzzzzzz" }, { icon: "zz" }],
-      path: "/Hesham.jpg",
-      parag:
-        "Hello There. <br />I Hope meet your expectation, I have got +1 year of experinece. on Web Development using <br /> <strong>NEXT.JS, Tailwind & Bootstrap</strong>. <br />I adore working with team and okay with remote work. <br />I have got reading documentation skill, Trying to solve BUGs and Errors.",
-      id: 3,
-    },
-  ];
   const mappingDevelopers = allDevelopers.map((dev, ind) => (
     <Card dev={dev} key={ind} />
   ));
 
   return (
-    <div>
-      <div className={`container ${styles.aboutParent}`}>
+    <div className="container">
+      <div className={` ${styles.aboutParent}`}>
         <article className={styles.article}>
           <h1 className={styles.head1}>
             A digital web studio creating stunning & engaging online experiences

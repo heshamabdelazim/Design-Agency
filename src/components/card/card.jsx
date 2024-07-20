@@ -3,7 +3,7 @@ import styles from "./card.module.css";
 import Link from "next/link";
 const Card = ({ dev }) => {
   return (
-    <Link href={`/about/developer`} className={styles.developer}>
+    <Link href={`/about/${dev.id}`} className={styles.developer}>
       <Image src={dev.path} alt={dev.name} fill />
 
       <div

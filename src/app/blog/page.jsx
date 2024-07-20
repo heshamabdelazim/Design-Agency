@@ -31,7 +31,9 @@ const Blog = async () => {
   // the best thing to use is timing of the cashe
   // but if you don't want to store anything you will write => fetch(URL, {cache:"no-store"})
 
-  // This each time you will see the component it will refreshed data
+  // This each duration you had said, Data will refreshed data
+
+  // BIG NOTE: It's better to fetch once every server component. If you fetch twice the performance decreases
 
   const myData = await gettingData();
   console.log(myData);
