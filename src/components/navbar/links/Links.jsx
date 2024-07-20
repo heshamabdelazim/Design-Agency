@@ -63,26 +63,25 @@ const Links = () => {
       )}
       {/* ========== */}
       <button
-        className={styles.menuButton}
+        className={` button ${styles.menuButton}`}
         onClick={() => setOpen((prev) => !prev)}
       >
         Menu
       </button>
-      {open && (
-        <div className={styles.mobilelinks}>
-          {links.map((link) => (
-            <Link
-              key={link.title}
-              href={link.path}
-              className={`${styles.mobileLink} ${
-                myPath === link.path ? styles.active : ""
-              }`}
-            >
-              {link.title}
-            </Link>
-          ))}
-        </div>
-      )}
+
+      <div className={`${styles.mobilelinks} ${open ? styles.show : ""}`}>
+        {links.map((link) => (
+          <Link
+            key={link.title}
+            href={link.path}
+            className={`${styles.mobileLink} ${
+              myPath === link.path ? styles.active : ""
+            }`}
+          >
+            {link.title}
+          </Link>
+        ))}
+      </div>
     </>
   );
 };

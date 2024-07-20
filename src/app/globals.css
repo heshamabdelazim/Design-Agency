@@ -60,4 +60,9 @@ a{
         padding-left: 1.4rem;
         padding-right: 1.4rem;
     }
+
+    .button{
+        padding: 0.5rem 0.7rem;
+        font-size: 0.9rem;
+    }
 }

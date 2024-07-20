@@ -18,3 +18,19 @@
     gap: 2rem;
     /* row-gap:5rem ; */
 }
+
+@media (max-width:991px){
+    .content{
+        /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+    }
+
+}
+@media (max-width:767px){
+    
+}
+@media (max-width:550px){
+    .content{
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        
+    }
+}
