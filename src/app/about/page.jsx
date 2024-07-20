@@ -4,7 +4,7 @@ import Image from "next/image";
 // import HydrationTest from "@/components/hydrationTest";
 import styles from "./about.module.css";
 import dynamic from "next/dynamic";
-import { useEffect, useRef } from "react";
+import { Suspense, useEffect, useRef } from "react";
 import Link from "next/link";
 import Card from "@/components/card/card.jsx";
 import { allDevelopers } from "../../../lib/data";
@@ -84,7 +84,9 @@ const About = () => {
           {/* <HydrationTestNoSSR /> */}
           {/* <div suppressHydrationWarning>{a}</div> */}
         </article>
-        <div className={styles.gallery}>{mappingDevelopers}</div>
+        <Suspense fallback={<div>Looding...</div>}>
+          <div className={styles.gallery}>{mappingDevelopers}</div>
+        </Suspense>
       </div>
     </div>
   );
