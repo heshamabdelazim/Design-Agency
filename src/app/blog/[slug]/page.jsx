@@ -1,7 +1,7 @@
-import NoImage from "@/components/no-Image/noImage";
+import NoImage from "@/components/no-Image/noImage.jsx";
 import styles from "./singlePage.module.css";
 import Image from "next/image";
-import PostUser from "@/components/postUser/postUser";
+import PostUser from "@/components/postUser/PostUser.jsx";
 import { Suspense } from "react";
 
 const Post = async ({ params }) => {

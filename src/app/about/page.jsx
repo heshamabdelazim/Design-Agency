@@ -6,7 +6,7 @@ import styles from "./about.module.css";
 import dynamic from "next/dynamic";
 import { useEffect, useRef } from "react";
 import Link from "next/link";
-import Card from "@/components/card/card";
+import Card from "@/components/card/card.jsx";
 import { allDevelopers } from "../../../lib/data";
 
 const About = () => {
