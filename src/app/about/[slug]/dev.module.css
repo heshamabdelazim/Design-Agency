@@ -1,6 +1,7 @@
 .container{
     display: flex;
     gap: 3rem;
+    align-items: center;
     /* padding: 4rem; */
     /* background: linear-gradient(to right , var(--text), var(--bgSoft)); */
 }
@@ -66,5 +67,23 @@
     to{
         scale: 1;
         opacity: 1;
+    }
+}
+
+@media (max-width:991px){
+    .content{
+        padding-right: 1.3rem;
+    }
+}
+@media (max-width:767px){
+    .container{
+        flex-direction: column;
+    }
+    .textContainer{
+        padding: 0;
+        align-items: center;
+    }
+    .textContainer > span {
+        text-align: center;
     }
 }
