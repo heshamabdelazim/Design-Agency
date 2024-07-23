@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <>
       <section className={styles.home}>
-        <div className={` container ${styles.content}`}>
+        <div className={` ${styles.content}`}>
           <p className={styles.soft}>developer</p>
           <h1 className={styles.strong}>we deliver best websites for you.</h1>
           <p className={styles.par}>
