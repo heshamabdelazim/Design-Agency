@@ -1,7 +1,13 @@
 import Image from "next/image";
 import styles from "./home.module.css";
 import Purpose from "@/components/purpose/purpose";
+import { connectToDb } from "../../lib/utils";
+import { getDevs } from "../../lib/data";
+
 const Home = () => {
+  // console.log(connectToDb());
+  // console.log(process.env.MONGO);
+  // console.log(getDevs());
   return (
     <>
       <section className={styles.home}>

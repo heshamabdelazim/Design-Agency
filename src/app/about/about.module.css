@@ -49,6 +49,7 @@
 @media (max-width:767px){
     .head1{
         font-size: calc(1rem + 3vw);
+        line-height: 2.7rem ;
     }
     .para{
         font-size: 0.9rem;

@@ -17,10 +17,10 @@ const Links = () => {
       title: "About",
       path: "/about",
     },
-    {
-      title: "Contact",
-      path: "/contact",
-    },
+    // {
+    //   title: "Contact",
+    //   path: "/contact",
+    // },
     {
       title: "Blog",
       path: "/blog",
@@ -57,9 +57,11 @@ const Links = () => {
           {/* <button className={styles.logout}>Logout</button> */}
         </>
       ) : (
-        <Link href="/login" className={styles.normalLink}>
-          login
-        </Link>
+        <>
+          {/* <Link href="/login" className={styles.normalLink}>
+            login
+          </Link> */}
+        </>
       )}
       {/* ========== */}
       <button

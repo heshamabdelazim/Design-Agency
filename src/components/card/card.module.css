@@ -29,3 +29,10 @@
 .show {
     opacity: 1;
 }
+
+@media (max-width:767px){
+    .developer {
+        width:220.8px;
+        height: 300.8px;
+    }
+}

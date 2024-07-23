@@ -8,12 +8,12 @@ const Footer = () => {
     <footer className={styles.footer}>
       <h1 className={styles.head}>Footer</h1>
       <div className={styles.top}>
-        <div>one</div>
+        {/* <div>one</div> */}
         <div className={styles.logoContainer}>
           <Logo />
-          <Social />
+          {/* <Social /> */}
         </div>
-        <div>one</div>
+        {/* <div>one</div> */}
       </div>
       <div className={styles.copy}>
         &copy;{new Date().getFullYear()} All rights preserved.

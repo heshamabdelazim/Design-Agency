@@ -11,9 +11,10 @@ footer.footer{
 
 .top{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    /* justify-content: space-between; */
     align-items: center;
-    padding: 5rem;
+    padding: 3.5rem 2rem 2rem;
     padding-right: 50px;
     padding-left: 50px;
 }
@@ -45,3 +46,10 @@ footer.footer{
     gap: 1rem;
 }
 
+
+@media (max-width:767px){
+    .head{
+        font-size: 3.5rem;
+    }
+
+}
