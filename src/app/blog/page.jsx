@@ -1,19 +1,27 @@
+"use client";
 import BlogContainer from "@/components/blogContainer/blogContainer";
 import styles from "./blog.module.css";
+import { user } from "../../../lib/data";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
-const Blog = async () => {
-  async function gettingData() {
-    const api = "https://jsonplaceholder.typicode.com";
-    const apiCategory = "posts";
-    const finalURL = api + "/" + apiCategory;
+async function gettingData() {
+  const api = "https://jsonplaceholder.typicode.com";
+  const apiCategory = "posts";
+  const finalURL = api + "/" + apiCategory;
 
-    const res = await fetch(finalURL, { cache: "force-cache" }); //you can delte cache: "force-cache" cuz, It's the default
-    if (!res.ok) {
-      throw new Error("something wrong");
-    }
-    const data = await res.json();
-    return data;
+  const res = await fetch(finalURL, { cache: "force-cache" }); //you can delte cache: "force-cache" cuz, It's the default
+  if (!res.ok) {
+    throw new Error("something wrong");
   }
+  const data = await res.json();
+  return data;
+}
+
+//component start here ==========================
+const Blog = () => {
+  const router = useRouter();
+  const [blogs, setBlogs] = useState();
 
   // After fetching from API, The default behavior of NEXT is caching responses-data. It increases performance.
   // So, res = await fetch(URL, {cache: "force-cache"})  //THis is the default and will cashe
@@ -35,12 +43,27 @@ const Blog = async () => {
 
   // BIG NOTE: It's better to fetch once every server component. If you fetch twice the performance decreases
 
-  const myData = await gettingData();
-  console.log(myData);
+  useEffect(() => {
+    myData();
+    redirection();
+  }, []);
 
-  const puttingArticles = myData.map((post, ind) => {
+  const myData = async () => {
+    const data = await gettingData();
+    setBlogs(data);
+  };
+
+  const redirection = () => {
+    if (!user) {
+      router.replace("/register");
+      return null;
+    }
+  };
+
+  const puttingArticles = blogs?.map((post, ind) => {
     return <BlogContainer key={ind} post={post} />;
   });
+
   return (
     <div className={`${styles.container}`}>
       <h2 className={styles.head}>Recently from the Blog</h2>

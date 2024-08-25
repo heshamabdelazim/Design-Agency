@@ -91,10 +91,8 @@ export function middleware(request: NextRequest) { //we change the Request cuz i
     // return NextResponse.redirect(new URL("/register", request.url))
     if (!user) {
         return NextResponse.redirect(new URL("/register", request.url))
-    } else {
-        console.log(user, "user1")
+    } 
     return NextResponse.next()
-    }
 }
     
     export const config = {
