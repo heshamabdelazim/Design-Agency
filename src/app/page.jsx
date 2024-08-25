@@ -1,13 +1,18 @@
+"use client";
 import Image from "next/image";
 import styles from "./home.module.css";
 import Purpose from "@/components/purpose/purpose";
 import { connectToDb } from "../../lib/utils";
-import { getDevs } from "../../lib/data";
+import { getDevs, user } from "../../lib/data";
+import { useRouter } from "next/navigation";
 
 const Home = () => {
   // console.log(connectToDb());
   // console.log(process.env.MONGO);
   // console.log(getDevs());
+  console.log(user);
+
+  const router = useRouter();
   return (
     <>
       <section className={styles.home}>
@@ -18,7 +23,9 @@ const Home = () => {
             Let your Audience know what you do. <br /> Let your website
             describes your inthusiasm.
           </p>
-          <button className="button">Get started </button>
+          <button className="button" onClick={() => router.push("/blog")}>
+            Get started{" "}
+          </button>
         </div>
       </section>
       <section className={styles.purpose}>

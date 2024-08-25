@@ -75,20 +75,32 @@ export const config = {
 //============================================================ another case catching cookie
 
 import type { NextRequest } from "next/server" //note import type //only from typescript files //from interface in that file
+import { user } from "../lib/data";
 
-const isLoggedIn: boolean = false;
+// const isLoggedIn: boolean = false;
+
+
 
 export function middleware(request: NextRequest) { //we change the Request cuz it made an error so
-    // let cookie = request.cookies.get("my-cookie") //it made error here but we change the Request to NextRequest
-    let headers = new Headers(request.headers) //to catch autherization
-    if (isLoggedIn) {
-        return NextResponse.next()
+// let cookie = request.cookies.get("my-cookie") //it made error here but we change the Request to NextRequest
+// let headers = new Headers(request.headers) //to catch autherization
+// if (user) {
+    //     return NextResponse.next()
+    // }
+    // return NextResponse.redirect(new URL("/register", request.url))
+    if (!user) {
+        return NextResponse.redirect(new URL("/register", request.url))
+    } else {
+        console.log(user, "user1")
+    return NextResponse.next()
     }
-    return NextResponse.redirect(new URL("/register", request.url))
 }
+    
+    export const config = {
+        matcher:[]
+    }
+    
 
-export const config = {
-    matcher:["/blog"]
-}
+
 // for refreshment, listin to the video => https://www.youtube.com/watch?v=ClY6vD4WHP0
 //middleware is not enough to do a notification system
