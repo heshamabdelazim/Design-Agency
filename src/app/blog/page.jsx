@@ -3,21 +3,36 @@ import BlogContainer from "@/components/blogContainer/blogContainer";
 import styles from "./blog.module.css";
 import { user } from "../../../lib/data";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
-const Blog = async () => {
-  const router = useRouter();
-  async function gettingData() {
-    const api = "https://jsonplaceholder.typicode.com";
-    const apiCategory = "posts";
-    const finalURL = api + "/" + apiCategory;
+async function gettingData() {
+  const api = "https://jsonplaceholder.typicode.com";
+  const apiCategory = "posts";
+  const finalURL = api + "/" + apiCategory;
 
-    const res = await fetch(finalURL, { cache: "force-cache" }); //you can delte cache: "force-cache" cuz, It's the default
-    if (!res.ok) {
-      throw new Error("something wrong");
-    }
-    const data = await res.json();
-    return data;
+  const res = await fetch(finalURL, { cache: "force-cache" }); //you can delte cache: "force-cache" cuz, It's the default
+  if (!res.ok) {
+    throw new Error("something wrong");
   }
+  const data = await res.json();
+  return data;
+}
+
+const Blog = () => {
+  const router = useRouter();
+  const [blogs, setBlogs] = useState();
+  // async function gettingData() {
+  //   const api = "https://jsonplaceholder.typicode.com";
+  //   const apiCategory = "posts";
+  //   const finalURL = api + "/" + apiCategory;
+
+  //   const res = await fetch(finalURL, { cache: "force-cache" }); //you can delte cache: "force-cache" cuz, It's the default
+  //   if (!res.ok) {
+  //     throw new Error("something wrong");
+  //   }
+  //   const data = await res.json();
+  //   return data;
+  // }
 
   // After fetching from API, The default behavior of NEXT is caching responses-data. It increases performance.
   // So, res = await fetch(URL, {cache: "force-cache"})  //THis is the default and will cashe
@@ -39,9 +54,13 @@ const Blog = async () => {
 
   // BIG NOTE: It's better to fetch once every server component. If you fetch twice the performance decreases
 
-  const myData = await gettingData();
+  const myData = async () => {
+    const data = await gettingData();
+    setBlogs(data);
+  };
 
-  const puttingArticles = myData.map((post, ind) => {
+  myData();
+  const puttingArticles = blogs?.map((post, ind) => {
     return <BlogContainer key={ind} post={post} />;
   });
 

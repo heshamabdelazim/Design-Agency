@@ -74,6 +74,7 @@ export const config = {
 
 //============================================================ another case catching cookie
 
+
 import type { NextRequest } from "next/server" //note import type //only from typescript files //from interface in that file
 import { user } from "../lib/data";
 
@@ -99,7 +100,6 @@ export function middleware(request: NextRequest) { //we change the Request cuz i
     export const config = {
         matcher:[]
     }
-    
 
 
 // for refreshment, listin to the video => https://www.youtube.com/watch?v=ClY6vD4WHP0

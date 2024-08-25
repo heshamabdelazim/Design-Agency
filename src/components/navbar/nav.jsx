@@ -1,7 +1,7 @@
 "use client";
 import Links from "./links/Links";
 import styles from "./navbar.module.css";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import Logo from "../logo/logo";
 
 const Nav = () => {
