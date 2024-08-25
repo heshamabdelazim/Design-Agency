@@ -1,5 +1,5 @@
 "use client";
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import styles from "./register.module.css";
 import { upDateUser, user } from "../../../../lib/data";
 import { useRouter } from "next/navigation";
@@ -28,7 +28,7 @@ const Register = () => {
         }}
       >
         <div className={styles.line}>
-          <label htmlFor="name">User Name</label>
+          <label htmlFor="name">User-Name</label>
           <input
             type="text"
             id="name"

@@ -27,6 +27,7 @@
 .line {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     gap: 3rem;
 }
 .line :where(input, label){
@@ -41,4 +42,26 @@
 .line label{
     font-weight: 800;
     font-size: 23px;
+}
+
+@media (max-width:767px){
+    .form{
+        width:80%;
+    }
+    .line {
+        gap: 0.2rem;
+    }
+    .line label{
+    font-weight: 600;
+    font-size: 15px;
+}
+.line input{
+    padding:  0;
+    flex: 1;
+    min-width: 100px;
+}
+.form::before{
+    font-size: 14px;
+}
+
 }
