@@ -3,13 +3,10 @@ import Links from "./links/Links";
 import styles from "./navbar.module.css";
 import { useEffect, useRef, useState } from "react";
 import Logo from "../logo/logo";
-import { user } from "../../../lib/data";
-import { useRouter } from "next/navigation";
 
 const Nav = () => {
   const navParent = useRef();
-  const [userName, setUserName] = useState();
-  const router = useRouter();
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
       window.scrollY > 0
