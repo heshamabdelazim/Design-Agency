@@ -98,7 +98,7 @@ export function middleware(request: NextRequest) { //we change the Request cuz i
 }
     
     export const config = {
-        matcher:[]
+        matcher:["/contact"]
     }
 
 
