@@ -1,10 +1,7 @@
 "use client";
 import Image from "next/image";
-// import styles from "./developer.moule.css";
-
 import styles from "./dev.module.css";
 import { allDevelopers } from "../../../../lib/data";
-import { useParams } from "next/navigation";
 
 const Developer = ({ params }) => {
   // const params = useParams();

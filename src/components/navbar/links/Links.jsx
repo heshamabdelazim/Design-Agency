@@ -3,6 +3,7 @@ import Link from "next/link";
 import styles from "./links.module.css";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { user } from "../../../../lib/data";
 
 const Links = () => {
   const myPath = usePathname();
@@ -28,8 +29,7 @@ const Links = () => {
   ];
 
   // suppose ===============
-  const sesstion = false;
-  const isadmin = true;
+
   // if you're not authentcated you should see login
   // if you're admin you should see admin-link
 
@@ -46,24 +46,8 @@ const Links = () => {
           {lin.title}
         </Link>
       ))}
-      {/* ========== */}
-      {sesstion ? ( //authentecated ?
-        <>
-          {isadmin && (
-            <Link href="/login" className={`${styles.link}`}>
-              Admin
-            </Link>
-          )}
-          {/* <button className={styles.logout}>Logout</button> */}
-        </>
-      ) : (
-        <>
-          {/* <Link href="/login" className={styles.normalLink}>
-            login
-          </Link> */}
-        </>
-      )}
-      {/* ========== */}
+
+      {/* =====smallScreens===== */}
       <button
         className={` button ${styles.menuButton}`}
         onClick={() => setOpen((prev) => !prev)}
