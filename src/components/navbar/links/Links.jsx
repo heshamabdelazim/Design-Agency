@@ -4,6 +4,7 @@ import styles from "./links.module.css";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { user } from "../../../../lib/data";
+import Logo from "@/components/logo/logo";
 
 const Links = () => {
   const myPath = usePathname();
@@ -33,20 +34,28 @@ const Links = () => {
   // if you're not authentcated you should see login
   // if you're admin you should see admin-link
 
-  return (
+  const putLinks = (isMobile = false) => (
     <>
       {links.map((lin) => (
         <Link
           key={lin.title}
           href={lin.path}
-          className={`${styles.normalLink} ${
+          className={`${isMobile ? styles.mobileLink : styles.normalLink} ${
             myPath === lin.path ? `${styles.active}` : ""
           }`}
+          onClick={() => {
+            isMobile && setOpen(false);
+          }}
         >
           {lin.title}
         </Link>
       ))}
+    </>
+  );
 
+  return (
+    <>
+      {putLinks()}
       {/* =====smallScreens===== */}
       <button
         className={` button ${styles.menuButton}`}
@@ -55,19 +64,17 @@ const Links = () => {
         Menu
       </button>
 
-      <div className={`${styles.mobilelinks} ${open ? styles.show : ""}`}>
-        {links.map((link) => (
-          <Link
-            key={link.title}
-            href={link.path}
-            className={`${styles.mobileLink} ${
-              myPath === link.path ? styles.active : ""
-            }`}
-          >
-            {link.title}
-          </Link>
-        ))}
-      </div>
+      {open && (
+        <div
+          className={styles.parent + " " + styles.show}
+          onClick={() => setOpen(false)}
+        >
+          <div className={styles.mobilelinks}>
+            <Logo />
+            {putLinks(true)}
+          </div>
+        </div>
+      )}
     </>
   );
 };

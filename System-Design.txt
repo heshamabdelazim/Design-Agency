@@ -8,7 +8,15 @@ Content:
 	# Designing the Data Flow and API Interactions
 	# Testing and Documentation
 
-# Tools and Techniques
+# Tools, Techniques, Libraries
+Swiper.js
+
+# Missing
+- Make settings
+- Customize tab to open colors
+- Virtual Slides in swiper.js that has "Testmonials"
+- Public APIs (GitHub) to use it on Design Agency
+- Draw, provide your expectation of the design (put your GitHub of canvas) 
 
 # Consideration
 

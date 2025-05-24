@@ -21,7 +21,7 @@ const Nav = () => {
       style={{ backgroundColor: ` ${isScrolled ? "white" : "transparent"}` }}
       ref={navParent}
     >
-      <Logo />
+      <Logo isForHeader={true} />
       <div className={styles.links}>
         <Links />
       </div>

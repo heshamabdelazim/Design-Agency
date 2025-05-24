@@ -10,7 +10,6 @@ const Home = () => {
   // console.log(connectToDb());
   // console.log(process.env.MONGO);
   // console.log(getDevs());
-  console.log(user);
 
   const router = useRouter();
   return (

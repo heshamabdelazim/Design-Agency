@@ -5,3 +5,9 @@
 .second{
     color: var(--bgSoft);
 }
+
+@media (max-width:768px){
+    .phoneNone{
+        display: none;
+    }
+}

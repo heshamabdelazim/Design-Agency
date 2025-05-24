@@ -8,25 +8,23 @@ import { allDevelopers } from "../../../lib/data";
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css/scrollbar";
 
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/effect-cards";
 
-import "./styles.css";
 // import "./";
 
 // import required modules
-import { EffectCards } from "swiper/modules";
+import {
+  A11y,
+  EffectCards,
+  Navigation,
+  Pagination,
+  Scrollbar,
+} from "swiper/modules";
+import SwiperComp from "@/components/card/SwiperComp";
 
 const About = () => {
-  const mappingDevelopers = allDevelopers.map((dev) => (
-    <SwiperSlide key={dev.id}>
-      {" "}
-      <Card dev={dev} />
-    </SwiperSlide>
-  ));
-
   return (
     <div className="container">
       <div className={` ${styles.aboutParent}`}>
@@ -44,17 +42,7 @@ const About = () => {
             Learn more {">"}
           </a>
         </article>
-        <Suspense fallback={<div>Looding...</div>}>
-          <Swiper
-            effect={"cards"}
-            grabCursor={true}
-            modules={[EffectCards]}
-            className="mySwiper"
-          >
-            {mappingDevelopers}
-          </Swiper>
-          {/* <div className={styles.gallery}>{mappingDevelopers}</div> */}
-        </Suspense>
+        <SwiperComp />
       </div>
     </div>
   );
@@ -62,41 +50,4 @@ const About = () => {
 
 export default About;
 
-/*
-import React, { useRef, useState } from 'react';
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/effect-cards';
-
-import './styles.css';
-
-// import required modules
-import { EffectCards } from 'swiper/modules';
-
-export default function App() {
-  return (
-    <>
-      <Swiper
-        effect={'cards'}
-        grabCursor={true}
-        modules={[EffectCards]}
-        className="mySwiper"
-      >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
-      </Swiper>
-    </>
-  );
-}
-
-*/
+// modules={[Navigation, Pagination, Scrollbar, A11y]}
