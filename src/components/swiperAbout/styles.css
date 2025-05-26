@@ -1,18 +1,20 @@
 .swiper {
   width: 240px;
   animation: openSwiper 0.6s 2s forwards;
+  margin: 10rem auto;
   /* height: 320px; */
-  span{
+  span[id*="Name"]{
     color: var(--linkColor);
     position: absolute;
     top: 50%;
     transform: translatey(-50%);
-    font-size: clamp(0.5rem, 7vw, 6rem);
+    font-size: clamp(18px, 7vw, 6rem);
     text-transform: uppercase;
     font-family: fantasy;
     &#dev-firstName{right: 120%;}
     &#dev-lastName{left: 120%;}
     &.aniamte{animation: animateName 0.6s forwards;}
+    
   }
 }
 
@@ -41,8 +43,8 @@
 
 @media (max-width:767px){
   .swiper span{
-    top:110%;
-    &#dev-firstName{right: 80%;}
-    &#dev-lastName{left: 80%;}
+    top:110% !important;
+    &#dev-firstName{right: 55% !important;}
+    &#dev-lastName{left: 55% !important; }
   }
 }

@@ -28,15 +28,8 @@ const Home = () => {
         </div>
       </section>
       <section className={styles.purpose}>
-        <Purpose
-          h2="Business"
-          p="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum sunt, iure voluptatem repellat ab veniam facere iusto quae quia delectus! "
-        />
-        <Purpose
-          h2="personal"
-          p="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum sunt, iure voluptatem repellat ab veniam facere iusto quae quia delectus! "
-          changeColor={true}
-        />
+        <Purpose h2="Business" />
+        <Purpose h2="personal" changeColor={true} />
       </section>
     </>
   );

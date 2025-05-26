@@ -19,6 +19,7 @@ Swiper.js
 - Draw, provide your expectation of the design (put your GitHub of canvas) 
 
 # Consideration
+https://startbootstrap.com/previews/creative
 
 ===========================================================
 # Project Requirements, User Stories, user flow, ask any ambiguities, and Prioritize Features
