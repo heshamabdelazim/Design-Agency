@@ -23,17 +23,10 @@ const Post = async ({ params }) => {
     const data = res.json();
     return data;
   };
+  // =================
   const myPost = await fetchingData();
   console.log(myPost);
 
-  // fetching userId==================
-
-  // BIG NOTE: It's better to fetch once every server component. If you fetch twice the performance decreases
-  // in this situation it's better to fetch userId in another server component
-
-  // NOTE ALSO <Suspense></Suspense>  this component comes from react. why this?
-  // because we did another server component to fetch. So this current compoent will fetch first then <PostUser/>
-  //So if <PostUser/> will be late we have a fallback
   return (
     <div className={`container ${styles.container}`}>
       <NoImage />

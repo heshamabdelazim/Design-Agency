@@ -4,7 +4,7 @@ function Banner({ banner }) {
   return (
     <div className={styles.banner}>
       <span className={styles.span}>TEN YEARS</span>
-      <h2>We've got what you need!</h2>
+      <h2>We{"'"}ve got what you need!</h2>
       <div className={styles.smallLine} />
       <p>
         +10 years of experience on the web fast delivering, performance and
