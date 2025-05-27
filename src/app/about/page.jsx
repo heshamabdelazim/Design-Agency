@@ -18,7 +18,7 @@ import "swiper/css/keyboard";
 
 import SwiperComp from "@/components/swiperAbout/SwiperComp";
 import Testmonial from "@/components/testmonial/Testmonial";
-import Banner from "./banner";
+import Banner from "./Banner";
 
 const About = () => {
   const theFirstImage = 0; //this helpful for the (css variable) when I change var(--img1) then var(--img2)
