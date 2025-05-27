@@ -15,7 +15,7 @@
     background-size:cover;
     background-position: center;
     padding: 10rem 2rem;
-    border-bottom:2px solid var(--linkColor);
+    border-bottom:2px solid var(--textFooter);
     transition: 1s;
     position: relative;
 }
@@ -45,7 +45,6 @@
     background-color: var(--bgSoft);
     padding: 4rem clamp(1.2rem, 2vw, 2rem);
     position: relative;
-     
     .smallLine{
         width: 100px;
         height: 2px;
@@ -73,32 +72,12 @@
     text-transform: uppercase;
     letter-spacing: 0.04rem;
 }
-/* small-line */
-.head1{
-    font-size: 2.4rem;
-    font-weight: 800;
-    line-height: 3.7rem;
-    /* padding: 0 5rem; */
-}
 
-.para{
-    font-size: 1.2rem;
-    font-weight: 400;
-    line-height: 2rem;
-    /* padding: 0 2rem; */
-}
-
-.href{
-    color: var(--linkColor);
-    font-size: 1.1rem;
-    text-decoration: underline;
-    font-weight: 500;
-    letter-spacing: 0.1rem;
-}
-.href:hover{
-    color: var(--text);
-}
 .button{margin: auto;}
+
+
+
+
 @media (max-width:767px){
     .head1{
         font-size: calc(1rem + 3vw);
