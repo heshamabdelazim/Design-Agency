@@ -20,8 +20,8 @@ const Links = () => {
       path: "/about",
     },
     // {
-    //   title: "Contact",
-    //   path: "/contact",
+    //   title: "draw",
+    //   path: "/draw",
     // },
     {
       title: "Blog",
@@ -55,15 +55,15 @@ const Links = () => {
 
   return (
     <>
+      {/* ===== normalScreens ===== */}
       {putLinks()}
-      {/* =====smallScreens===== */}
+      {/* ===== smallScreens ===== */}
       <button
         className={` button ${styles.menuButton}`}
         onClick={() => setOpen((prev) => !prev)}
       >
         Menu
       </button>
-
       {open && (
         <div
           className={styles.parent + " " + styles.show}
