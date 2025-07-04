@@ -27,13 +27,8 @@ const About = () => {
   useEffect(() => {
     //every 4 sec, the imageInd will change => means the hero image will change
     const timeout = setTimeout(() => {
-<<<<<<< HEAD
       setImageInd((old) => (old === theLastImage ? theFirstImage : old + 1));
     }, 4000);
-=======
-      setImageInd((old) => (old === arrayImages.length - 1 ? 0 : old + 1));
-    }, 5000);
->>>>>>> 5668cad92b3d98ad146f684ee9556f17ee494281
     return () => clearTimeout(timeout); //remove unnecessary renderes
   });
   return (
