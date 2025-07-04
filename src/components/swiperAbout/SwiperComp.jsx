@@ -32,7 +32,25 @@ function SwiperComp() {
     .find((dev) => dev.id === slideIndex)
     .name.split(" ");
   return (
-    <>
+    <div id="swiper-about">
+      <div className="click">
+        CLICK
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-chevrons-down-icon lucide-chevrons-down"
+        >
+          <path d="m7 6 5 5 5-5" />
+          <path d="m7 13 5 5 5-5" />
+        </svg>
+      </div>
       <Swiper
         effect={"cards"}
         grabCursor={true}
@@ -51,7 +69,7 @@ function SwiperComp() {
           {slideDev[1]}
         </span>
       </Swiper>
-    </>
+    </div>
   );
 }
 

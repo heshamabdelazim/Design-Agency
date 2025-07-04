@@ -15,16 +15,25 @@ import "swiper/css/keyboard";
 
 import SwiperComp from "@/components/swiperAbout/SwiperComp";
 import Banner from "./Banner";
+import Image from "next/image";
 
 const About = () => {
-  const theFirstImage = 0; //this helpful for the (css variable) when I change var(--img1) then var(--img2)
-  const theLastImage = 2;
-  let [imageInd, setImageInd] = useState(theFirstImage);
+  const arrayImages = [
+    "/cover-about.jpg",
+    "/cover-about1.jpg",
+    "/cover-about2.jpg",
+  ];
+  let [imageInd, setImageInd] = useState(0);
   useEffect(() => {
     //every 4 sec, the imageInd will change => means the hero image will change
     const timeout = setTimeout(() => {
+<<<<<<< HEAD
       setImageInd((old) => (old === theLastImage ? theFirstImage : old + 1));
     }, 4000);
+=======
+      setImageInd((old) => (old === arrayImages.length - 1 ? 0 : old + 1));
+    }, 5000);
+>>>>>>> 5668cad92b3d98ad146f684ee9556f17ee494281
     return () => clearTimeout(timeout); //remove unnecessary renderes
   });
   return (
@@ -32,10 +41,15 @@ const About = () => {
       <div className={styles.first + " first-element"}>
         <article
           className={styles.article}
-          style={{
-            backgroundImage: `var(--img${imageInd})`,
-          }}
+          // style={{
+          //   backgroundImage: `var(--img${imageInd})`,
+          // }}
         >
+          <Image
+            src={arrayImages[imageInd]}
+            fill
+            style={{ objectFit: "cover", transition: "0.6s" }}
+          />
           <div>
             <h1 className={styles.head1}>
               A digital web studio creating stunning & engaging online
@@ -53,9 +67,8 @@ const About = () => {
           </div>
         </article>
       </div>
-      <Banner banner={styles.banner} />
       {/* ==================== */}
-
+      <Banner />
       {/* ==================== */}
       <SwiperComp />
     </>

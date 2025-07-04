@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./about.module.css";
-function Banner({ banner }) {
+function Banner() {
   return (
     <div className={styles.banner}>
       <span className={styles.span}>TEN YEARS</span>
