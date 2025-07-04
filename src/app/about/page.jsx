@@ -24,10 +24,11 @@ const About = () => {
     "/cover-about2.jpg",
   ];
   let [imageInd, setImageInd] = useState(0);
+  const theLast = arrayImages.length - 1;
   useEffect(() => {
     //every 4 sec, the imageInd will change => means the hero image will change
     const timeout = setTimeout(() => {
-      setImageInd((old) => (old === theLastImage ? theFirstImage : old + 1));
+      setImageInd((old) => (old === theLast ? 0 : old + 1));
     }, 4000);
 
     return () => clearTimeout(timeout); //remove unnecessary renderes
@@ -45,6 +46,7 @@ const About = () => {
             src={arrayImages[imageInd]}
             fill
             style={{ objectFit: "cover", transition: "0.6s" }}
+            alt="images-intro"
           />
           <div>
             <h1 className={styles.head1}>

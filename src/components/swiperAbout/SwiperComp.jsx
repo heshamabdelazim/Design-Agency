@@ -5,10 +5,10 @@ import { allDevelopers } from "../../../lib/data";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Card from "./card";
 
-//////////////
+////
 import "swiper/css";
 import "swiper/css/effect-cards";
-
+////
 import "./styles.css";
 
 function SwiperComp() {
@@ -58,7 +58,7 @@ function SwiperComp() {
         modules={[EffectCards, Autoplay]}
         autoplay={{ delay: 10000 }}
         // className="mySwiper"
-        onSwiper={(swiper) => console.log(swiper)}
+        // onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={(e) => setSlideIndex(e.activeIndex)}
       >
         {mappingDevelopers}
