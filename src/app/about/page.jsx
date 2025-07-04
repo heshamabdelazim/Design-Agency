@@ -29,6 +29,7 @@ const About = () => {
     const timeout = setTimeout(() => {
       setImageInd((old) => (old === theLastImage ? theFirstImage : old + 1));
     }, 4000);
+
     return () => clearTimeout(timeout); //remove unnecessary renderes
   });
   return (
