@@ -1,23 +1,19 @@
 "use client";
 import styles from "./about.module.css";
 // import { Suspense } from "react";
-import Card from "@/components/swiperAbout/card.jsx";
-import { allDevelopers } from "../../../lib/data";
 
 //SWIPER
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // import "swiper/css/scrollbar";
 
 // =================Import Swiper styles
 import "swiper/css";
-// import "swiper/css/bundle";
 import "swiper/css/autoplay";
 import "swiper/css/keyboard";
 
 import SwiperComp from "@/components/swiperAbout/SwiperComp";
-import Testmonial from "@/components/testmonial/Testmonial";
 import Banner from "./Banner";
 
 const About = () => {
@@ -25,10 +21,10 @@ const About = () => {
   const theLastImage = 2;
   let [imageInd, setImageInd] = useState(theFirstImage);
   useEffect(() => {
-    //every 7 sec, the imageInd will change => means the hero image will change
+    //every 4 sec, the imageInd will change => means the hero image will change
     const timeout = setTimeout(() => {
       setImageInd((old) => (old === theLastImage ? theFirstImage : old + 1));
-    }, 5000);
+    }, 4000);
     return () => clearTimeout(timeout); //remove unnecessary renderes
   });
   return (

@@ -7,8 +7,8 @@ import { useEffect, useState } from "react";
 
 async function gettingData() {
   const api = "https://jsonplaceholder.typicode.com";
-  const apiCategory = "posts";
-  const finalURL = api + "/" + apiCategory;
+  const endPoint = "posts";
+  const finalURL = api + "/" + endPoint;
 
   const res = await fetch(finalURL, { cache: "force-cache" }); //you can delte cache: "force-cache" cuz, It's the default
   if (!res.ok) {
