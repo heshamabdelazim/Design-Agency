@@ -29,12 +29,12 @@
     /* margin-top: 1.5rem; */
     cursor: pointer;
     box-shadow: 0 0 22px 1px #00000059;
-    background-size: 200%;
+    background-size: 200% !important;
 }
 
 .button:hover{
     transition: 0.6s;
-    background-position: -100%;
+    background-position: -105% !important;
 }
 .first-element{ /* on every page, that's is the first element under the nav*/
     min-height: 90%;

@@ -29,7 +29,7 @@ const Home = () => {
       </section>
       <section className={styles.purpose}>
         <Purpose h2="Business" />
-        <Purpose h2="personal" changeColor={true} />
+        <Purpose h2="personal" color="#9a8700" />
       </section>
     </>
   );
